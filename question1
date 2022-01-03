@@ -1,0 +1,16 @@
+words = {'act','god','cat','dog','tac'}
+maps={}
+ans=[]
+for i in words:
+    j=sorted(i)
+    o=''.join(j)
+    if o in maps.keys():
+        maps[o]+='0'+i
+        print(maps[o])
+    else:
+        maps[o]=i
+        print(maps[o])
+       
+for i in maps.values():
+    ans.append(i.split('0'))
+print(ans)
